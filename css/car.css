@@ -1,0 +1,8 @@
+.car {
+    width: auto;
+    height: 250px;
+    position: absolute;
+    top: -500px;
+    z-index: 15;
+    transition: top 2s linear;
+}
