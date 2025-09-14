@@ -20,7 +20,7 @@
 }
 
 .road {
-    background-image: url(img/road.png);
+    background-image: url(../img/road.png);
     height: 100%;
     flex: 0 0 200px;
     display: flex;
