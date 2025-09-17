@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/game-setings.css">
     <link rel="stylesheet" href="./css/lock.css">
 
+    <link rel="shortcut icon" href="./img/player.png" type="image/x-icon">
+
     <script src="https://kit.fontawesome.com/8dc62210d7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,6 +31,7 @@
         </div>
 
         <div class="start">
+            <img class="start-background" src="./img/Start.png" alt="">
             <img class="player" src="./img/player.png" alt="">
         </div>
 
@@ -39,13 +42,15 @@
             <h1 class="money-text">50</h1>
         </div> -->
 
-        <div class="finish"></div>
+        <div class="finish">
+            <img class="finish-background" src="./img/End.png" alt="">
+        </div>
     </div>
     <div class="game-setings">
         <form action="">
             <div>
                 <label for="input-bet">Vložte sázku</label>
-                <input type="number" id="input-bet" step="1" min="1" value="100" required>
+                <input type="number" id="input-bet" step="10" min="10" value="100" required>
             </div>
 
             <div>
@@ -67,10 +72,10 @@
     <script type="module" src="./js/generatingGamePath.js"></script>
     <script type="module" src="./js/generatingGameboard.js"></script>
     <script type="module" src="./js/WinLosePopUp.js"></script>
+    <script type="module" src="./js/dragging.js"></script>
     <script type="module" src="./js/checkScroll.js"></script>
     <script type="module" src="./js/checkCollisions.js"></script>
     <script type="module" src="./js/controlingSystem.js"></script>
-    <script src="main-logic.js" type="module"></script>
 </body>
 
 </html>

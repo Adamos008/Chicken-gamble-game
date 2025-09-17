@@ -1,15 +1,8 @@
 Opravit po resetu jízdu auta nahoru
 
 Vypnout možnost klikání na scrollbar
-Uprava img: start a end
-
-Opravit error z konzole ???
 
 oprava bugů
-
-Sázkový systém:
-dodělat multiplier
-
 
 Lepší styling
 

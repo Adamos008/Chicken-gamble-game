@@ -63,6 +63,10 @@ function resetEverything() {
     player.style.transform = "translateX(0px)";
     
     inputBetAmount.value = '';
+
+    moneyText.forEach((text) => {
+        text.innerHTML = 'XXX';
+    });
     
     channels.forEach((channel) => {
         channel.src = './img/Channel.png';
@@ -105,6 +109,7 @@ const money = document.getElementById('money');
 const inputBet = document.getElementById('input-bet');
 const inputBetAmount = document.getElementById('input-bet-amount');
 const lockDiv = document.querySelector('.lock');
+lockDiv.style.width = board.scrollWidth + 'px';
 
 const startGameBtn = document.getElementById('start-game');
 const cashOutBtn = document.getElementById('cash-out');
@@ -123,6 +128,8 @@ money.innerHTML = moneyAmount;
 
 startGameBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    popUp.style.display = 'none';
+
     const wantedBet = Number(inputBet.value);
     if (wantedBet > 0 && wantedBet <= moneyAmount) {
         inputBet.setAttribute('disabled', '');
@@ -142,7 +149,7 @@ startGameBtn.addEventListener('click', (e) => {
         multiplier = 1;
         multiplierForText = 1;
 
-        for (let i = 0; i < channels.length < moneyText.length; i++) {
+        for (let i = 0; i < moneyText.length; i++) {
         let multiplierPreview = Math.pow(1.1, i + 1);
         let previewValue = Math.round(wantedBet * multiplierPreview);
         moneyText[i].innerHTML = previewValue;
