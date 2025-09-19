@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicken Game</title>
     <link rel="stylesheet" href="./css/resets.css">
+    <link rel="stylesheet" href="./css/secret.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/player.css">
     <link rel="stylesheet" href="./css/car.css">
@@ -26,11 +27,15 @@
 
 
     <div class="board">
+        <div class="sus">
+            <p>Tom + Majda = 💕</p>
+        </div>
         <div class="lock">
             <i class="fa-solid fa-lock"></i>
         </div>
 
         <div class="start">
+            <div class="s"></div>
             <img class="start-background" src="./img/Start.png" alt="">
             <img class="player" src="./img/player.png" alt="">
         </div>
@@ -67,6 +72,7 @@
     <div class="pop-up">
         <h1 class="pop-up-text">Win/Lose</h1>
         <button id="play-again">Play Again</button>
+        <button id="play-again-win">Play Again</button>
     </div>
 
     <script type="module" src="./js/generatingGamePath.js"></script>
@@ -76,6 +82,7 @@
     <script type="module" src="./js/checkScroll.js"></script>
     <script type="module" src="./js/checkCollisions.js"></script>
     <script type="module" src="./js/controlingSystem.js"></script>
+    <script type="module" src="./js/secret.js"></script>
 </body>
 
 </html>

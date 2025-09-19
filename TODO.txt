@@ -4,6 +4,6 @@ Vypnout možnost klikání na scrollbar
 
 oprava bugů
 
-Lepší styling
+aby se dalo kliknout i na text na kanále
 
 Pracovat na velikostech viewportu

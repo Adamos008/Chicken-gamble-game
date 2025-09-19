@@ -23,6 +23,7 @@
 }
 
 .pop-up button {
+    display: none;
     background-color: #FFD400;
     padding: 8px 40px;
     border-radius: 10px;

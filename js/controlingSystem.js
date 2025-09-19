@@ -37,10 +37,12 @@ function handleClick(){
         if(currentIndex < channels.length){
             channels[currentIndex].addEventListener('click', handleClick);
         } else {
+            playAgainWin.style.display = 'block';
             console.log('Vyhrál jsi!');
             win();
         }
     } else{
+        resetButton.style.display = 'block';
         console.log('not safe!');
         cars[currentIndex].style.top = '1000px';
         player.style.transform = `translateX(${(currentIndex + 1) * 200}px)`;
@@ -53,13 +55,18 @@ function handleClick(){
 channels[currentIndex].addEventListener('click', handleClick);
 
 //Reseting Game
+
 const resetButton = document.getElementById('play-again');
+const playAgainWin = document.getElementById('play-again-win');
 
 const roadBlocks = document.querySelectorAll('.road-block');
 const popUp = document.querySelector('.pop-up');
 const board = document.querySelector('.board');
 
-function resetEverything() {   
+function resetEverything() {
+    playAgainWin.style.display = 'none';
+    resetButton.style.display = 'none';
+
     player.style.transform = "translateX(0px)";
     
     inputBetAmount.value = '';
@@ -99,6 +106,13 @@ function resetEverything() {
     
     lockDiv.style.display = 'flex';
 }
+
+playAgainWin.addEventListener('click', () => {
+    moneyAmount = moneyAmount + Number(inputBetAmount.value);
+    money.innerHTML = moneyAmount;
+    console.log(moneyAmount);
+    resetEverything();
+});
 
 resetButton.addEventListener('click', () => {
     resetEverything();
