@@ -11,7 +11,7 @@ const cars = document.querySelectorAll('.car');
 let generatedPath = generateGamePath(maxTiles);
 let currentIndex = 0;
 
-console.log(generatedPath);
+// console.log(generatedPath);
 
 function win(){
     player.style.transform = `translateX(${(currentIndex + 1) * 200}px)`;

@@ -9,7 +9,7 @@ function generatingGameboard(){
 
     let car = document.createElement('img');
     car.classList.add('car');
-    console.log('./img/cars/Car' + Math.floor(Math.random() * 3) + '.png')
+    // console.log('./img/cars/Car' + Math.floor(Math.random() * 3) + '.png')
     car.src = './img/cars/Car' + Math.floor(Math.random() * 3) + '.png';
 
     let roadBlock = document.createElement('img');
